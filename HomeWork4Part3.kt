@@ -8,5 +8,8 @@ fun main(args: Array<String>) {
 fun String.forEachWord(word: (String) -> Unit): List<String>{
     var theWord: String = this
     var splitString: List<String> = theWord.split(" ")
+    for (w in splitString) {
+        word(w)
+    }
     return splitString
 }
